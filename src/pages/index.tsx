@@ -105,7 +105,7 @@ const Home = () => {
         <div className='hero min-h-screen '>
           <div className='hero-content text-center p-0'>
             <div className='max-w-5xl	w-screen flex flex-col items-center gap-4'>
-              <h1 className='text-5xl font-bold'>Gerador de Senhas</h1>
+              <h1 className='text-5xl font-bold px-4'>Gerador de Senhas</h1>
 
               <div className='flex justify-center w-full relative items-center flex-wrap'>
                 <div
@@ -132,7 +132,7 @@ const Home = () => {
                     }
                   >
                     <button
-                      className='btn btn-primary btn-circle sm:ml-4'
+                      className='btn btn-primary btn-circle ml-4'
                       onClick={() => copyContent()}
                       onMouseLeave={() => setPasswordCopied(false)}
                     >
