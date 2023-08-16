@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.fireworks-animation-medium {
+  width: 90px;
+  height: 90px;
+  margin: 30px;
+  background: url("https://res.cloudinary.com/alianzasynegocios/image/upload/v1573123078/sprite-2_zdwo4d.png")
+    no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  animation: fireworkMedium 1s steps(30);
+  opacity: 0;
+  position: absolute;
+  bottom: -50px;
+}
+.fireworks-animation-medium--active {
+  background-position: -2700px 0;
+  transition: background 1s steps(30);
+  opacity: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes fireworksMedium {
+  from {
+    background-position: 0 0;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  to {
+    background-position: -2700px 0;
+  }
 }
